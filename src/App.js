@@ -1,5 +1,6 @@
 import './App.css';
 import ClassCounter from './Components/ClassCounter';
+import IntervalClassCounter from './Components/CounterSimple/IntervalClassCounter';
 import HoockCounterThree from './Components/HoockCounterThree';
 import HookCounter from './Components/HookCounter';
 import HookCounter4 from './Components/HookCounter4';
@@ -20,7 +21,8 @@ function App() {
      {/* <HookCounter4></HookCounter4> */}
     {/* <ComponentRunOnceClass></ComponentRunOnceClass> */}
     {/* <HooksRunsOnce></HooksRunsOnce> */}
-    <MouseContainer></MouseContainer>
+    {/* <MouseContainer></MouseContainer> */}
+    <IntervalClassCounter></IntervalClassCounter>
     
     </div>
   );
