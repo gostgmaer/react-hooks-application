@@ -11,6 +11,10 @@ function HooksRunsOnce() {
     useEffect(()=>{
         console.log("User Effect Call");
         window.addEventListener('mousemove',logMousePosition)
+        return ()=>{
+            console.log("Component Unmount");
+            window.removeEventListener('mousemove',logMousePosition)
+        }
     },[])
   return (
     <div>

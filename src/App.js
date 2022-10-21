@@ -6,6 +6,7 @@ import HookCounter4 from './Components/HookCounter4';
 import HookCounterTWO from './Components/HookCounterTWO';
 import ClassCounterOne from './Components/Hooks/ClassCounterOne';
 import HookCounterOne from './Components/Hooks/HookCounterOne';
+import MouseContainer from './Components/MouseContainer/MouseContainer';
 import ComponentRunOnceClass from './Components/UpdateComponentsHooks/ComponentRunOnceClass';
 import HooksRunsOnce from './Components/UpdateComponentsHooks/HooksRunsOnce';
 
@@ -18,7 +19,8 @@ function App() {
      {/* <HoockCounterThree></HoockCounterThree> */}
      {/* <HookCounter4></HookCounter4> */}
     {/* <ComponentRunOnceClass></ComponentRunOnceClass> */}
-    <HooksRunsOnce></HooksRunsOnce>
+    {/* <HooksRunsOnce></HooksRunsOnce> */}
+    <MouseContainer></MouseContainer>
     
     </div>
   );
