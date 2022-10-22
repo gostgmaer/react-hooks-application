@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { UserContext } from '../../App'
 import ComponentF from './ComponentF'
 
 function ComponentE() {
+ const user =   useContext(UserContext)
   return (
     <div>
-        <ComponentF></ComponentF>
+       {user}
     </div>
   )
 }
