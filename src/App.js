@@ -14,6 +14,9 @@ import ComponentRunOnceClass from "./Components/UpdateComponentsHooks/ComponentR
 import HooksRunsOnce from "./Components/UpdateComponentsHooks/HooksRunsOnce";
 import ComponentC from "./Components/UseContext/ComponentC";
 import React from "react";
+import Cunter1 from "./Components/UseReducer/Cunter1";
+import Counter2 from "./Components/UseReducer/Counter2";
+import Counter3 from "./Components/UseReducer/Counter3";
 export const UserContext = React.createContext();
 function App() {
   return (
@@ -29,9 +32,12 @@ function App() {
       {/* <IntervalClassCounter></IntervalClassCounter>
     <IntervalHookCounter></IntervalHookCounter> */}
       {/* <FetchAPI></FetchAPI> */}
-      <UserContext.Provider value={"kishor"}>
+      {/* <UserContext.Provider value={"kishor"}>
         <ComponentC></ComponentC>
-      </UserContext.Provider>
+      </UserContext.Provider> */}
+      {/* <Cunter1></Cunter1> */}
+      {/* <Counter2></Counter2> */}
+      <Counter3></Counter3>
     </div>
   );
 }
