@@ -16,19 +16,20 @@ const reducer = (state, action) => {
 };
 
 function Counter3() {
-  const [count,dispatch]= useReducer(reducer, initialState)
+  const [count, dispatch] = useReducer(reducer, initialState);
+  const [counttwo, dispatchTwo] = useReducer(reducer, initialState);
   return (
     <div>
-        <div>Count  - {count}</div>
-      <button onClick={()=>dispatch("increment")} type="button" className="btn btn-primary">
-        Increment
-      </button>
-      <button  onClick={()=>dispatch("reset")} type="button" className="btn btn-denger">
-        Reset
-      </button>
-      <button  onClick={()=>dispatch("decrement")} type="button" className="btn btn-secondary">
-        Decrement
-      </button>
+      <div>Count value 1 - {count}</div>
+      <button onClick={() => dispatch("increment")}>Increment</button>
+      <button onClick={() => dispatch("reset")}>Reset</button>
+      <button onClick={() => dispatch("decrement")}>Decrement</button>
+      <div>
+      <div>Counter value 2 - {counttwo}</div>
+      <button onClick={() => dispatchTwo("increment")}>Increment</button>
+      <button onClick={() => dispatchTwo("reset")}>Reset</button>
+      <button onClick={() => dispatchTwo("decrement")}>Decrement</button>
+      </div>
     </div>
   );
 }
