@@ -8,6 +8,7 @@ import HookCounter4 from './Components/HookCounter4';
 import HookCounterTWO from './Components/HookCounterTWO';
 import ClassCounterOne from './Components/Hooks/ClassCounterOne';
 import HookCounterOne from './Components/Hooks/HookCounterOne';
+import FetchAPI from './Components/HooksApicall/FetchAPI';
 import MouseContainer from './Components/MouseContainer/MouseContainer';
 import ComponentRunOnceClass from './Components/UpdateComponentsHooks/ComponentRunOnceClass';
 import HooksRunsOnce from './Components/UpdateComponentsHooks/HooksRunsOnce';
@@ -23,8 +24,9 @@ function App() {
     {/* <ComponentRunOnceClass></ComponentRunOnceClass> */}
     {/* <HooksRunsOnce></HooksRunsOnce> */}
     {/* <MouseContainer></MouseContainer> */}
-    <IntervalClassCounter></IntervalClassCounter>
-    <IntervalHookCounter></IntervalHookCounter>
+    {/* <IntervalClassCounter></IntervalClassCounter>
+    <IntervalHookCounter></IntervalHookCounter> */}
+    <FetchAPI></FetchAPI>
     
     </div>
   );
