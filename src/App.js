@@ -13,12 +13,36 @@ import MouseContainer from "./Components/MouseContainer/MouseContainer";
 import ComponentRunOnceClass from "./Components/UpdateComponentsHooks/ComponentRunOnceClass";
 import HooksRunsOnce from "./Components/UpdateComponentsHooks/HooksRunsOnce";
 import ComponentC from "./Components/UseContext/ComponentC";
-import React from "react";
+import React, { useReducer } from "react";
 import Cunter1 from "./Components/UseReducer/Cunter1";
 import Counter2 from "./Components/UseReducer/Counter2";
 import Counter3 from "./Components/UseReducer/Counter3";
+import CompA from "./Components/useReducerContext/CompA";
+import CompB from "./Components/useReducerContext/CompB";
+import CompC from "./Components/useReducerContext/CompC";
 export const UserContext = React.createContext();
+
+export const countContext = React.createContext()
+
+const initialState = 0;
+const reducer = (state, action) => {
+  // return newState
+  switch (action) {
+    case "increment":
+      return state + 1;
+    case "decrement":
+      return state - 1;
+    case "reset":
+      return initialState;
+    default:
+      return state;
+  }
+};
+
+
 function App() {
+  const [count, disPatch] = useReducer(reducer,initialState)
+
   return (
     <div className="App">
       {/* <ClassCounter></ClassCounter>
@@ -37,7 +61,16 @@ function App() {
       </UserContext.Provider> */}
       {/* <Cunter1></Cunter1> */}
       {/* <Counter2></Counter2> */}
-      <Counter3></Counter3>
+      {/* <Counter3></Counter3> */}
+      <countContext.Provider value={{countState:count,countDispatch:disPatch}}>
+      <div>
+        Count - {count}
+      </div>
+      <CompA></CompA>
+      <CompB></CompB>
+      <CompC></CompC>
+      </countContext.Provider>
+     
     </div>
   );
 }
