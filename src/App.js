@@ -20,6 +20,8 @@ import Counter3 from "./Components/UseReducer/Counter3";
 import CompA from "./Components/useReducerContext/CompA";
 import CompB from "./Components/useReducerContext/CompB";
 import CompC from "./Components/useReducerContext/CompC";
+import DataFechingOne from "./Components/useReducerWithAPI/DataFechingOne";
+import UseReducerAPICall from "./Components/useReducerWithAPI/UseReducerAPICall";
 export const UserContext = React.createContext();
 
 export const countContext = React.createContext()
@@ -62,14 +64,17 @@ function App() {
       {/* <Cunter1></Cunter1> */}
       {/* <Counter2></Counter2> */}
       {/* <Counter3></Counter3> */}
-      <countContext.Provider value={{countState:count,countDispatch:disPatch}}>
+      {/* <countContext.Provider value={{countState:count,countDispatch:disPatch}}>
       <div>
         Count - {count}
       </div>
       <CompA></CompA>
       <CompB></CompB>
       <CompC></CompC>
-      </countContext.Provider>
+      </countContext.Provider> */}
+      {/* <DataFechingOne></DataFechingOne> */}
+    <UseReducerAPICall></UseReducerAPICall>
+
      
     </div>
   );
