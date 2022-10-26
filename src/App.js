@@ -22,6 +22,7 @@ import CompB from "./Components/useReducerContext/CompB";
 import CompC from "./Components/useReducerContext/CompC";
 import DataFechingOne from "./Components/useReducerWithAPI/DataFechingOne";
 import UseReducerAPICall from "./Components/useReducerWithAPI/UseReducerAPICall";
+import UseCallbackHookOne from "./Components/UseCallbackHook/UseCallbackHookOne";
 export const UserContext = React.createContext();
 
 export const countContext = React.createContext()
@@ -73,7 +74,8 @@ function App() {
       <CompC></CompC>
       </countContext.Provider> */}
       {/* <DataFechingOne></DataFechingOne> */}
-    <UseReducerAPICall></UseReducerAPICall>
+    {/* <UseReducerAPICall></UseReducerAPICall> */}
+    <UseCallbackHookOne></UseCallbackHookOne>
 
      
     </div>
